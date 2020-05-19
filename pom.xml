@@ -7,12 +7,21 @@
     <groupId>groupId</groupId>
     <artifactId>clever-Charlotte</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <name>java learning</name>
+    <description>clever-charlotte parent</description>
     <!--  pom类型  -->
     <packaging>pom</packaging>
+
+    <!--  子模块  -->
+    <modules>
+        <module>algorithm</module>
+    </modules>
 
     <!--  版本管理  -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cglib.version>2.2.2</cglib.version>
     </properties>
 
     <!--  依赖管理  -->
@@ -23,10 +32,11 @@
             <dependency>
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
-                <version>2.2.2</version>
+                <version>${cglib.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <plugins>
