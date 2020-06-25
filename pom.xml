@@ -12,11 +12,11 @@
         <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>groupId</groupId>
+    <groupId>com.github.charlotte</groupId>
     <artifactId>clever-Charlotte</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>java learning</name>
+    <name>clever-charlotte-parent</name>
     <description>clever-charlotte parent</description>
     <!--  pom类型  -->
     <packaging>pom</packaging>
@@ -33,6 +33,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cglib.version>2.2.2</cglib.version>
         <mybatis-spring-boot-starter.version>2.1.3</mybatis-spring-boot-starter.version>
+        <dubbo.version>2.7.1</dubbo.version>
+        <curator-recipes.version>4.2.0</curator-recipes.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
     </properties>
 
     <!--  依赖管理  -->
@@ -51,6 +54,36 @@
                 <artifactId>cglib</artifactId>
                 <version>${cglib.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator-recipes.version}</version>
+                <!--        排除curator中对zk依赖，独立引入，否则会有版本问题        -->
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.zookeeper</groupId>
+                        <artifactId>zookeeper</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -63,6 +96,7 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>
