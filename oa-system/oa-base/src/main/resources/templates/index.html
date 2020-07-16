@@ -42,24 +42,32 @@
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          人员管理 <span class="caret"></span>
+          人力资源 <span class="caret"></span>
           </a>
         
           <ul class="dropdown-menu">
-            <li><a href="/account/list">用户列表</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="/account/list">员工列表</a></li>
           </ul>
-          
           
         </li>
       </ul>
       
       
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          系统设置 <span class="caret"></span>
+          </a>
+        
+          <ul class="dropdown-menu">
+            <li><a href="/manager/accountList">账号列表</a></li>
+            <li><a href="/manager/roleList"> 角色管理</a></li>
+            <li><a href="/manager/permissionList">权限管理</a></li>
+          </ul>
+          
+        </li>
+      </ul>
       
       
       <form class="navbar-form navbar-left">
@@ -83,6 +91,9 @@
       <ul th:if="${session.account} !=null" class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          
+          <!-- 头像 -->
+          <img style=" width: 22px; margin-right: 8px;" th:src="@{${session.account.location}}" alt="..." class="img-rounded">
           
           欢迎你 : [[${session.account.loginName}]] <span class="caret"></span> </a>
           <ul class="dropdown-menu">
