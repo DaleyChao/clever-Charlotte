@@ -21,8 +21,9 @@ public class AccountController {
     private AccountService accountService;
 
     @RequestMapping("/page")
-    public Object page (@RequestParam(required = false) Integer pageNum, @RequestParam(required = false) Integer pageSize) {
+    public Object page(@RequestParam(required = false, defaultValue = "1") Integer pageNum,
+                       @RequestParam(required = false, defaultValue = "5") Integer pageSize) {
 
-        return accountService.findByPage(pageNum,pageSize);
+        return accountService.findByPage(pageNum, pageSize);
     }
 }
