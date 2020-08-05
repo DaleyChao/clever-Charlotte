@@ -1,0 +1,6 @@
+
+fdfs:
+  so-timeout: 1500
+  connect-timeout: 600
+  tracker-list:
+    - 119.45.158.39:22122
