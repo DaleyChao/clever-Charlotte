@@ -38,6 +38,7 @@
         <zookeeper.version>3.4.14</zookeeper.version>
         <common3.version>3.10</common3.version>
         <page-helper.version>1.2.12</page-helper.version>
+        <fdfs-client.version>1.27.2</fdfs-client.version>
     </properties>
 
     <!--  依赖管理  -->
@@ -102,6 +103,12 @@
                 <version>${page-helper.version}</version>
             </dependency>
 
+            <!--     fdfd client客户端       -->
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fdfs-client.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
