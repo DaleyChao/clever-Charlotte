@@ -4,10 +4,15 @@ import com.github.charlotte.oa.entity.Menu;
 import com.github.charlotte.oa.entity.MenuExample;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * MenuDAO继承基类
+ *
  * @author Daniel
  */
 @Repository
 public interface MenuDAO extends MyBatisBaseDao<Menu, Integer, MenuExample> {
+
+
 }
