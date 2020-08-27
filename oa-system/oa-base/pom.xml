@@ -31,13 +31,6 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 		</dependency>
 
-		<!--	测试依赖	-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
 		<!--	分页插件	-->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
@@ -60,6 +53,7 @@
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
 
+		<!--	测试依赖	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
