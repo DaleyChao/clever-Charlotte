@@ -1,6 +1,9 @@
 package com.github.charlotte.arica.dao;
 
+import org.apache.ibatis.annotations.Param;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * DAO公共基类，由MybatisGenerator自动生成请勿修改

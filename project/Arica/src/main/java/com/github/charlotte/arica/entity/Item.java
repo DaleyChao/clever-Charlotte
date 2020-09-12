@@ -18,7 +18,7 @@ public class Item implements Serializable {
 
     private String content;
 
-    private Date lastGenerate;
+    private Date lastGenerate = new Date();
 
     private static final long serialVersionUID = 1L;
 
