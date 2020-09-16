@@ -1,8 +1,8 @@
 package com.github.charlotte.lcn.controller;
 
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
-import com.mashibing.lcnpay.dao.TblPayDao;
-import com.mashibing.lcnpay.entity.TblPay;
+import com.github.charlotte.lcn.dao.TblPayDao;
+import com.github.charlotte.lcn.entity.TblPay;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,6 +1,6 @@
 package com.github.charlotte.lcn.dao;
 
-import com.mashibing.lcnpay.entity.TblPay;
+import com.github.charlotte.lcn.entity.TblPay;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
