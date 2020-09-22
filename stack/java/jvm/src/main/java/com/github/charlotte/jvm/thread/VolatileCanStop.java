@@ -32,6 +32,7 @@ public class VolatileCanStop implements Runnable {
         thread.start();
         Thread.sleep(3000);
         r.canceled = true;
+
     }
 
 }
