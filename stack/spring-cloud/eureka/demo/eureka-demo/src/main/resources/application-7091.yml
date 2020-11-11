@@ -6,4 +6,4 @@ eureka:
   client:
     #设置服务注册中心的URL
     service-url:
-      defaultZone: http://root:root@localhost:7902/eureka/
+      defaultZone: http://root:root@localhost:7901/eureka/
