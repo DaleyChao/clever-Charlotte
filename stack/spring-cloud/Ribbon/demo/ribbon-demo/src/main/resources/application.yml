@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ribbon-test
+server:
+  port: 8082
+#注册中心
+eureka:
+  client:
+    #设置服务注册中心的URL
+    service-url:
+      defaultZone: http://root:root@eureka-7901:7901/eureka/,http://root:root@eureka-7902:7902/eureka/
